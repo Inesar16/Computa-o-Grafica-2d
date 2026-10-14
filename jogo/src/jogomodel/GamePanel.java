@@ -47,7 +47,7 @@ public class GamePanel extends JPanel {
     private static final int PORTAL = 3;
     private static final int HELPPOINT = 4;
     
-
+    
     private final int[][] mapa = {
     	    /*0*/{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
     	    /*1*/{1,0,0,0,1,0,1,0,1,0,0,0,1,0,1,0,1,1,0,0,1,1,1,0,1,0,0,0,0,1,0,0,0,1},
@@ -59,18 +59,18 @@ public class GamePanel extends JPanel {
     	    /*7*/{1,1,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,0,0,1},
     	    /*8*/{1,0,0,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,0,1,1},
     	    /*9*/{1,0,1,1,1,0,1,0,0,0,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,1},
-    	    /*10*/{1,0,1,0,0,0,1,0,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,1,0,1,1},
-    	    /*11*/{1,0,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,1,0,1,1,0,1,0,1,0,1,1},
-    	    /*12*/{1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,1,0,1,1},
-    	    /*13*/{1,0,1,1,1,0,1,1,1,0,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,1},
-    	    /*14*/{1,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,1,0,1,1},
-    	    /*15*/{1,0,1,0,1,1,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,0,1,1},
-    	    /*16*/{1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,1},
-    	    /*17*/{1,1,1,0,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,1},
-    	    /*18*/{1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,1},
-    	    /*19*/{1,0,1,1,1,0,1,0,1,1,1,0,1,1,1,0,1,0,1,0,0,1,1,0,1,0,1,0,0,1,1,0,1,1},
-    	    /*20*/{1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,1},
-    	    /*21*/{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+    	   /*10*/{1,0,1,0,0,0,1,0,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,1,0,1,1},
+    	   /*11*/{1,0,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,1,0,1,1,0,1,0,1,0,1,1},
+    	   /*12*/{1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,1,0,1,1},
+    	   /*13*/{1,0,1,1,1,0,1,1,1,0,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,1},
+           /*14*/{1,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,1,0,1,1},
+           /*15*/{1,0,1,0,1,1,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,0,1,1},
+    	   /*16*/{1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,1},
+    	   /*17*/{1,1,1,0,1,0,1,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,1},
+    	   /*18*/{1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,1},
+    	   /*19*/{1,0,1,1,1,0,1,0,1,1,1,0,1,1,1,0,1,0,1,0,0,1,1,0,1,0,1,0,0,1,1,0,1,1},
+    	   /*20*/{1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,1},
+    	   /*21*/{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
     	};
 
     // Modelo do labirinto
@@ -223,7 +223,6 @@ public class GamePanel extends JPanel {
     }
 
     // -- carregar imagem da torre --
-    
     private void carregarTowerImagem() {
         try {
             // ler imagem png
@@ -240,7 +239,7 @@ public class GamePanel extends JPanel {
     
     private void carregarPlayerImagem() {
     	for (int i = 1; i <= 12; i++) {
-            String path = "/Player/" + i + ".png"; // <-- CAMINHO CERTO
+            String path = "/Player/" + i + ".png"; 
             try (InputStream in = getClass().getResourceAsStream(path)) {
                 if (in == null) throw new IllegalStateException("Recurso não encontrado: " + path);
                 walk[i-1] = ImageIO.read(in);
@@ -257,7 +256,7 @@ public class GamePanel extends JPanel {
     	animTimer = new Timer(delayMs, e -> {
     		if (!movingAnim) return;         // só avança quando animamos
     		frame = (frame + 1) % 12;        // próximo frame
-    		if (--animTicksLeft <= 0) {      // terminou a “rajada” da animação
+    		if (--animTicksLeft <= 0) {      // terminou a animação
     			movingAnim = false;
     		}
     		repaint();
@@ -284,7 +283,7 @@ public class GamePanel extends JPanel {
         playerCol = novoCol;
         
         movingAnim = true;
-        animTicksLeft = 16;   // ajusta a duração do “passo animado”
+        animTicksLeft = 16;
         frame = 0; 
 
         // verifica se chegou à torre
@@ -292,9 +291,7 @@ public class GamePanel extends JPanel {
             ganhou = true;
         }
 
-        // (no futuro: se destino == PORTAL -> ativa visão reduzida)
-        // (se destino == HELPPOINT -> remove penalização, etc.)
-
+        
         repaint();
     }
     
@@ -326,13 +323,13 @@ public class GamePanel extends JPanel {
         a.add(new Area(new Rectangle2D.Double(x, y + w/2.0, w, h - w)));              // corpo
         a.add(new Area(new Ellipse2D.Double(x, y + h - w, w, w)));                    // base
 
-        // preenchimento semi-transparente (deixa ver o chão/parede por baixo)
+        // preenchimento semi-transparente 
         GradientPaint gpFill = new GradientPaint(x, y,new Color(150, 200, 240, 150), x + w , y ,new Color(4, 118, 208, 255));
         
         g2.setPaint(gpFill);
         g2.fill(a);
 
-        // brilho interior suave (segunda passada)
+        // brilho interior suave 
         GradientPaint gpGlow = new GradientPaint(
             x, y + h/3f, new Color(180, 235, 255, 120),
             x, y + h,     new Color(180, 235, 255, 0), true
@@ -375,7 +372,7 @@ public class GamePanel extends JPanel {
         // “aura”/contorno
         g2.setComposite(AlphaComposite.SrcOver.derive(0.6f));
         g2.setPaint(new Color(255, 200, 255, 140));
-        g2.setStroke(new BasicStroke(3f));
+        g2.setStroke(new BasicStroke(2f));
         g2.draw(path);
 
         // reset do alpha
@@ -404,7 +401,7 @@ public class GamePanel extends JPanel {
                 }else {
                     g2.setColor(new Color(60, 60, 70));
                 }
-                g2.fillRect(x, y, CELL_SIZE, CELL_SIZE);
+                g2.fillRect(x, y, CELL_SIZE, CELL_SIZE);// DESENHA O CHAO EM GRELHA
             }
         }
         for (int row = 0; row < ROWS; row++) {
@@ -414,6 +411,7 @@ public class GamePanel extends JPanel {
                  int y = row * CELL_SIZE;
                  int tipo = lab[row][col];
             	
+                //desenho da posição de cada objeto inicialmente 
                 switch (tipo) {
                 case TOWER:
                     if (TowerImg != null) {
@@ -435,7 +433,6 @@ public class GamePanel extends JPanel {
                 	if (row + 2 < ROWS && lab[row + 1][col] == HELPPOINT && lab[row + 2][col] == HELPPOINT)  {
                 		
                 		drawHelpPointArea(g2, x, y);
-                		
                     }
                     break;
                 }
@@ -515,6 +512,7 @@ public class GamePanel extends JPanel {
 	    printButton = drawButton(g2, centerX,   centerX, buttonWidth, buttonHeight, "Imprimir");
     }
     
+    //DESENHA BOTÃO DO PAINEL FINAL
     private Rectangle drawButton(Graphics2D g2, int x, int y, int w, int h, String label) {
   	  // sombra
   	  g2.setColor(new Color(0, 0, 0, 80));
@@ -542,7 +540,7 @@ public class GamePanel extends JPanel {
   	  g2.drawString(label, textX, textY);
   	
   	  return new Rectangle(x, y, w, h); // usado pelo mouseClicked
-  	}
+    }
     
     // --- função para imprimir ---
     private void saveScreenshot() {
